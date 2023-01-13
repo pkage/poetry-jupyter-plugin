@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poetry-jupyter-plugin"
-version = "0.1.2"
+version = "0.1.3"
 description = "Poetry plugin to manage Jupyter kernels"
 authors = ["Patrick Kage <patrick.r.kage@gmail.com>"]
 license = "MIT"
@@ -8,6 +8,13 @@ readme = "README.md"
 homepage = "https://github.com/pkage/poetry-jupyter-plugin"
 repository = "https://github.com/pkage/poetry-jupyter-plugin"
 packages = [{include = "poetry_jupyter_plugin"}]
+keywords = ["poetry", "poetry-plugin", "plugin", "jupyter", "jupyter-kernel"]
+classifiers = [
+    "Framework :: Jupyter",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+    "Topic :: Scientific/Engineering"
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
