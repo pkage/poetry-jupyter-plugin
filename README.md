@@ -13,20 +13,20 @@ installing packages globally or dealing with `ipykernel` directly.
 
 Install the plugin with:
 
-```
+```sh
 $ poetry self add poetry-jupyter-plugin
 ```
 
 Then, from within your poetry project:
 
-```
+```sh
 $ poetry install ipykernel -G dev
 $ poetry jupyter install
 ```
 
 Remove the kernelspec with:
 
-```
+```sh
 $ poetry jupyter remove
 ```
 
@@ -35,7 +35,7 @@ $ poetry jupyter remove
 By default, the installed kernel will use the name of the project and a default
 Poetry icon. To configure these options, add these lines to your `pyproject.toml`:
 
-```
+```toml
 [tool.jupyter.kernel]
 name = "my-cool-kernel"
 display = "My cool kernel"
