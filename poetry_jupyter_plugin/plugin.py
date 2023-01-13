@@ -181,7 +181,7 @@ class JupyterEnableCommand(JupyterCommand):
 
             # asset lib only gets you bytes, so we'll do it like this
             if kernel['icon'] is None:
-                icon_data = asset.load('poetry_jupyter:assets/poetry.png').read()
+                icon_data = asset.load('poetry_jupyter_plugin:assets/poetry.png').read()
             else:
                 icon_data = open(kernel['icon'], 'rb').read()
 
