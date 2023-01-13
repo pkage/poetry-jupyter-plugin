@@ -1,4 +1,4 @@
-# poetry jupyter plugin
+# poetry-jupyter-plugin
 
 ## overview
 
