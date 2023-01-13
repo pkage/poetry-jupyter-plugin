@@ -5,7 +5,7 @@ description = "Poetry plugin to manage Jupyter kernels"
 authors = ["Patrick Kage <patrick.r.kage@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "poetry_jupyter"}]
+packages = [{include = "poetry_jupyter_plugin"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -18,10 +18,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.plugins."poetry.application.plugin"]
-jupyter-command = "poetry_jupyter.plugin:JupyterKernelPlugin"
-
-[tool.jupyter.kernel]
-name = "my-cool-kernel"
-display = "My cool kernel"
-icon = "/path/to/icon.png"
-
+jupyter-command = "poetry_jupyter_plugin.plugin:JupyterKernelPlugin"
