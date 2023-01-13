@@ -1,4 +1,4 @@
-# Poetry Jupyter plugin
+# poetry jupyter plugin
 
 ## overview
 
@@ -33,7 +33,7 @@ $ poetry jupyter remove
 ### configuration
 
 By default, the installed kernel will use the name of the project and a default
-Poetry icon. To configure these options, add these lines to your `pyproject.toml`:
+Poetry icon. To configure these options, add this block to your `pyproject.toml`:
 
 ```toml
 [tool.jupyter.kernel]
