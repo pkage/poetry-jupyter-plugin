@@ -1,5 +1,6 @@
 from functools import reduce
 from pprint import pprint
+from pathlib import Path
 import tempfile
 import os
 import json
@@ -62,7 +63,7 @@ class JupyterCommand(Command):
         if venv is None:
             return False
         
-        ipykernels = venv.site_packages.find('ipykernel')
+        ipykernels = venv.site_packages.find(Path('ipykernel'))
 
         if len(ipykernels) == 0:
             return False
@@ -92,7 +93,7 @@ class JupyterCommand(Command):
             if argv is None:
                 continue
 
-            if argv[0] == venv.python:
+            if argv[0] == str(venv.python):
                 obj['key'] = key
                 return obj
 
@@ -166,7 +167,7 @@ class JupyterEnableCommand(JupyterCommand):
         with tempfile.TemporaryDirectory() as tmpdir:
             spec = {
                  'argv': [
-                     self.get_venv().python,
+                     str(self.get_venv().python),
                      '-m',
                      'ipykernel_launcher',
                      '-f',
