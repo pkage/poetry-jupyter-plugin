@@ -1,4 +1,4 @@
-# poetry-jupyter-plugin
+# 📦 poetry-jupyter-plugin
 
 ## overview
 
@@ -8,6 +8,8 @@ This is a really simple plugin to allow you to install your
 dependencies locked down for reproducible notebooks, or to set up a single
 "data science" notebook for one-off calculations without fiddling about with
 installing packages globally or dealing with `ipykernel` directly.
+
+[![asciicast](https://asciinema.org/a/gZ79uCyWFZFTtp6J295YS5wpO.svg)](https://asciinema.org/a/gZ79uCyWFZFTtp6J295YS5wpO)
 
 ## getting started
 
