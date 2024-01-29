@@ -22,7 +22,7 @@ $ poetry self add poetry-jupyter-plugin
 Then, from within your poetry project:
 
 ```sh
-$ poetry install ipykernel -G dev
+$ poetry add ipykernel -G dev
 $ poetry jupyter install
 ```
 
