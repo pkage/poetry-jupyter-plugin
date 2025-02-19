@@ -5,8 +5,9 @@ import tempfile
 import os
 import json
 import platform
+import importlib.resources
 
-import asset
+
 from cleo.commands.command import Command
 from poetry.plugins.application_plugin import ApplicationPlugin
 from poetry.utils.env import EnvManager, VirtualEnv
@@ -182,7 +183,7 @@ class JupyterEnableCommand(JupyterCommand):
 
             # asset lib only gets you bytes, so we'll do it like this
             if kernel['icon'] is None:
-                icon_data = asset.load('poetry_jupyter_plugin:assets/poetry.png').read()
+                icon_data = importlib.resources.read_binary('poetry_jupyter_plugin', 'assets/poetry.png')
             else:
                 icon_data = open(kernel['icon'], 'rb').read()
 
