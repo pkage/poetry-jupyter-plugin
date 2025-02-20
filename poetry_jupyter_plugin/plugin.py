@@ -33,11 +33,15 @@ class JupyterCommand(Command):
         name = optional_chain(data, 'tool.jupyter.kernel.name')
         if name is None:
             name = optional_chain(data, 'tool.poetry.name')
+        if name is None:
+            name = optional_chain(data, 'project.name')
 
         # get the current display name or default to project name
         display_name = optional_chain(data, 'tool.jupyter.kernel.display')
         if display_name is None:
             display_name = optional_chain(data, 'tool.poetry.name')
+        if display_name is None:
+            display_name = optional_chain(data, 'project.name')
 
         # get the current display name or default to project name
         icon = optional_chain(data, 'tool.jupyter.kernel.icon') # None is an ok default
@@ -183,7 +187,7 @@ class JupyterEnableCommand(JupyterCommand):
 
             # asset lib only gets you bytes, so we'll do it like this
             if kernel['icon'] is None:
-                icon_data = importlib.resources.read_binary('poetry_jupyter_plugin', 'assets/poetry.png')
+                icon_data = importlib.resources.read_binary('poetry_jupyter_plugin.assets', 'poetry.png')
             else:
                 icon_data = open(kernel['icon'], 'rb').read()
 

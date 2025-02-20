@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poetry-jupyter-plugin"
-version = "0.1.4"
+version = "0.2.2"
 description = "Poetry plugin to manage Jupyter kernels"
 authors = ["Patrick Kage <patrick.r.kage@gmail.com>"]
 license = "MIT"
